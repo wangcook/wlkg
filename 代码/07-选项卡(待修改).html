@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			input{
+				width: 60px;
+				height: 25px;
+				border: 0;
+			}
+			.active{
+				background: yellow;
+			}
+			
+			
+			div{
+				width: 200px;
+				height: 120px;
+				background: gray;
+				color: white;
+				display: none;
+			}
+		</style>
+		
+		<script>
+			window.onload = function(){
+				var aBt = document.getElementsByTagName('input');
+				var aDiv = document.getElementsByTagName('div');
+				
+				for(var i=0; i<aBt.length; i++){
+					aBt[i].index = i;
+					aBt[i].onclick = function(){
+						// 清空样式
+						for(var j=0; j<aBt.length; j++){
+							aBt[j].className = '';
+							aDiv[j].style.display = 'none';
+						}
+						
+						// 设置
+						this.className = 'active';
+						aDiv[this.index].style.display = 'block';
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="摘要" />
+		<input type="button" value="体育" />
+		<input type="button" value="财经" />
+		
+		<div>
+			摘要新闻
+		</div>
+		<div>
+			体育新闻
+		</div>
+		<div>
+			财经新闻
+		</div>
+	</body>
+</html>

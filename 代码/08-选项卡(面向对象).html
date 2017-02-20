@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			input {
+				width: 60px;
+				height: 25px;
+				border: 0;
+			}
+			
+			.active {
+				background: yellow;
+			}
+			
+			div {
+				width: 200px;
+				height: 120px;
+				background: gray;
+				color: white;
+				display: none;
+			}
+		</style>
+
+		<script>
+			window.onload = function() {
+				var tab = new TabSwitch();
+			}
+			
+			// 选项卡 -- 构造函数
+			function TabSwitch(){
+				// this  -- 选项卡对象
+				this.aBt = document.getElementsByTagName('input');
+				this.aDiv = document.getElementsByTagName('div');
+				
+				for(var i = 0; i < this.aBt.length; i++) {
+					this.aBt[i].index = i;
+					this.aBt[i].onclick = this.tabClick;
+				}
+			}
+			
+
+			// 按钮点击
+			// function tabClick() {
+			TabSwitch.prototype.tabClick = function(){
+				// 清空样式
+				for(var j = 0; j < this.aBt.length; j++) {
+					this.aBt[j].className = '';
+					this.aDiv[j].style.display = 'none';
+				}
+
+				// 设置
+				this.aBt[this.index].className = 'active';
+				this.aDiv[this.index].style.display = 'block';
+			}
+		</script>
+	</head>
+
+	<body>
+		<input type="button" value="摘要" />
+		<input type="button" value="体育" />
+		<input type="button" value="财经" />
+
+		<div>
+			摘要新闻
+		</div>
+		<div>
+			体育新闻
+		</div>
+		<div>
+			财经新闻
+		</div>
+	</body>
+
+</html>

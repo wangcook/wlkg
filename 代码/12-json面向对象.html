@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			// 构造函数
+			function Person(name, age){
+				this.name = name;
+				this.age = age;
+			}
+			Person.prototype.speak = function(){
+				alert(this.name + this.age);
+			}
+			
+			// 对象
+			var liming = new Person('李明', 18);
+			// liming.speak();
+			
+			
+			
+			// JSON方式面向对象
+			var zhangsan = {
+				name: '张三',
+				sex: '男',
+				age: 18,
+				speak: function(){
+					alert(this.name + this.sex + this.age);
+				}
+			};
+			zhangsan.speak();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

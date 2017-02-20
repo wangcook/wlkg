@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+//			var arr1 = [1,2,3];
+
+//			var arr2 = new Array(2,3,5,7,8);
+//			var arr3 = new Array(3);
+//			alert(arr2);
+
+			// 构造函数/Person类  
+			function Person(name, sex){
+				// 1、原材料
+				// var this = new Object();
+				
+				// 2、加工
+				this.name = name;
+				this.sex = sex;
+				this.showName = function(){
+					alert(this.name);
+				}
+				this.showSex = function(){
+					alert(this.sex);
+				}
+				
+				// 3、出厂
+				// return this;
+			}
+			
+			// 张三、李四、王五  --- 对象
+			var zhangsan = new Person('张三',' 男');
+			var lisi = new Person('李四', '男');
+//			zhangsan.showName();
+//			lisi.showName();
+			
+			alert(zhangsan.showName === lisi.showName);
+		</script>
+	</head>
+	
+	
+	<body>
+		<div style="background: red;"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+	
+	
+</html>

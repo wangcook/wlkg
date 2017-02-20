@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<script>
+			window.onload = function() {
+				var liming = new Person('李明');
+			}
+
+			function Person(name) {
+				this.bt = document.getElementById("bt");
+				this.name = name;
+
+				var _this = this;
+				this.bt.onclick = function(){
+					_this.click();
+				}
+			}
+
+			Person.prototype.click = function() {
+				// alert(this);
+				
+				var _this = this;
+				setInterval(function() {
+					// this --> window
+					_this.change();
+				}, 1000);
+			}
+
+			Person.prototype.change = function() {
+				console.log(this.name);
+			}
+		</script>
+	</head>
+
+	<body>
+		<input type="button" value="按钮" id="bt" />
+	</body>
+
+</html>

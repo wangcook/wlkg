@@ -1,0 +1,625 @@
+/*******************头部开始***********************/
+
+a {
+	text-decoration: none;
+	font-size: 13px;
+}
+
+h3 {
+	font-weight: normal;
+}
+
+ul {
+	list-style: none;
+}
+
+i,
+em,
+strong {
+	font-weight: normal;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#header {
+	width: 100%;
+	height: 78px;
+}
+.clearfix :after{
+	content: ".";
+	clear: both;
+	display: block;
+	overflow: hidden;
+	height: 0;
+	visibility: hidden;
+}
+
+#header .top {
+	width: 1070px;
+	height: 78px;
+	/*background: red;*/
+	margin: 0 auto;
+	/*padding-top: 15px;*/
+}
+
+#header .logo {
+	width: 305px;
+	height: 63px;
+	/*background: blue;*/
+	float: left;
+	padding-top: 15px
+}
+
+#header .title {
+	width: 690px;
+	height: 78px;
+	background: ;
+	float: right;
+}
+
+#header .title .school {
+	width: 530px;
+	height: 78px;
+	/*background: green;*/
+	float: left;
+}
+
+#header .title .school a {
+	float: left;
+}
+
+#header .title .school .a1 {
+	background: url(../img/nav.png);
+	width: 100px;
+	height: 78px;
+}
+
+#header .title .school .a2 {
+	width: 122px;
+	height: 78px;
+	background: url(../img/nav.png) -100px 0;
+}
+
+#header .title .school .a3 {
+	background: url(../img/nav.png) -222px 0;
+	width: 148px;
+	height: 78px;
+}
+
+#header .title .school .a4 {
+	background: url(../img/nav.png) -370px 0;
+	width: 119px;
+	height: 78px;
+}
+
+#header .title li:hover .a1 {
+	background: url(../img/nav-on.png);
+}
+
+#header .title li:hover .a2 {
+	background: url(../img/nav-on.png) -100px 0;
+}
+
+#header .title li:hover .a3 {
+	background: url(../img/nav-on.png) -222px 0;
+}
+
+#header .title li:hover .a4 {
+	background: url(../img/nav-on.png) -370px 0;
+}
+
+#header .title .text {
+	width: 145px;
+	height: 63px;
+	text-align: right;
+	float: right;
+	padding-top: 15px;
+}
+
+#header .title .text a {
+	margin: 0 15px;
+	color: #a1968c;
+}
+
+#header .title .text .a2 {
+	margin-right: 0;
+}
+
+#header .title .text .bt00 {
+	width: 143px;
+	height: 23px;
+	border: 1px solid grey;
+	padding-top: 3px;
+}
+
+#header .title .text .bt00 .bt1 {
+	width: 123px;
+	height: 20px;
+	border: 0;
+	float: left;
+}
+
+#header .title .text .bt00 .bt2 {
+	width: 16px;
+	height: 20px;
+	float: left;
+	border: 0;
+	background: url(../img/bt2.png);
+}
+
+
+/*********************** 横幅**************************/
+
+#pota {
+	width: 100%;
+	height: 354px;
+}
+
+#pota img {
+	width: 100%;
+	height: 354px;
+}
+
+
+/***********************小喇叭 **************************/
+
+#small {
+	width: 100%;
+	height: 37px;
+}
+
+#small .small-0 {
+	width: 1050px;
+	height: 37px;
+	margin: 0 auto;
+	line-height: 37px;
+	padding-left: 20px;
+	background: url(../img/bt5.png) no-repeat center bottom;
+}
+
+.small-0 span {
+	width: 28px;
+	height: 37px;
+	float: left;
+	background: url(../img/bt4.png) no-repeat left center;
+}
+
+.small-0 p {
+	float: left;
+}
+
+
+/***********************主体内容 **************************/
+
+#main00 {
+	width: 100%;
+	height: 1590px;
+	background: #d6dae2;
+	padding-top: 20px;
+}
+
+#main00 .main0 {
+	width: 1070px;
+	height: 1590px;
+	margin: 0 auto;
+	background: #d6dae2;
+	position: relative;
+}
+
+.main1 {
+	width: 772px;
+	height: 360px;
+	background: white;
+	padding: 0 5px;
+}
+
+.main1 h3 {
+	display: inline-block;
+	width: 702px;
+	height: 60px;
+	padding: 0 20px 0 54px;
+	font-size: 22px;
+	color: black;
+	line-height: 60px;
+	background: url(../img/bt6.png) no-repeat 20px center;
+}
+
+.main1 h3 a {
+	float: right;
+	color: #888888;
+}
+
+.main1 dl {
+	width: 257px;
+	height: 300px;
+	/*margin: 0 12px;*/
+	/*text-align: center;*/
+}
+
+.main1 dt {
+	margin-left: 15px;
+}
+
+.main1 dd {
+	width: 203px;
+	font-size: 14px;
+	margin: 10px 0 0 22px;
+	line-height: 24px;
+}
+
+.main1 dd p {
+	color: #888888;
+}
+
+.main1 dd span {
+	color: #000000;
+}
+
+.main1 .dl1 {
+	float: left;
+}
+
+.main1 .dl2 {
+	float: left;
+}
+
+.main1 .dl3 {
+	float: left;
+}
+
+.main2 {
+	width: 742px;
+	height: 450px;
+	background: #f2f1ef;
+	margin-top: 20px;
+	padding: 20px 20px;
+}
+
+.main2 h3,
+.main3 h3 {
+	display: inline-block;
+	width: 702px;
+	height: 40px;
+	padding: 0 0 0 34px;
+	font-size: 22px;
+	color: black;
+}
+
+.main2 h3 {
+	background: url(../img/bt10.png) no-repeat 0 3px;
+}
+
+.main3 h3 {
+	background: url(../img/bt16.png) no-repeat 0 5px;
+}
+
+.main2 h3 a,
+.main3 h3 a {
+	float: right;
+	color: #888888;
+}
+
+.main2 dl {
+	width: 722px;
+	height: 87px;
+	margin-bottom: 15px;
+	padding: 20px 0 20px 20px;
+}
+
+.main2 dt {
+	float: left
+}
+
+.main2 dd {
+	padding-left: 15px;
+	font-size: 13px;
+	float: left;
+	line-height: 24px;
+}
+
+.main2 dd p,
+.main3 dd p {
+	/*font-weight: bold;*/
+	font-size: 18px;
+}
+
+.main2 dd span,
+.main3 dd span {
+	color: #888888;
+	font-size: 12px;
+	padding-left: 17px;
+	background: url(../img/bt15.png) no-repeat 0 2px;
+}
+
+.main2 .dl1 {
+	background: url(../img/bt11.png) no-repeat right 0 white;
+}
+
+.main2 .dl2 {
+	background: url(../img/bt12.png) no-repeat right 0 white;
+}
+
+.main2 .dl3 {
+	background: url(../img/bt13.png) no-repeat right 0 white;
+}
+
+.main3 {
+	width: 742px;
+	height: 680px;
+	background: #f2f1ef;
+	margin-top: 20px;
+	padding: 20px 20px 0 20px;
+}
+
+.main3 dl {
+	width: 742px;
+	height: 182px;
+	border-bottom: 1px solid grey;
+	margin-bottom: 20px;
+}
+
+.main3 dt {
+	float: left;
+}
+
+.main3 dd {
+	padding-left: 15px;
+	font-size: 13px;
+	line-height: 24px;
+	float: left;
+	width: 464px;
+	height: 157px;
+}
+
+.main4 {
+	width: 267px;
+	background: #fcfafb;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.main41 {
+	width: 187px;
+	padding: 0 20px 0 20px;
+}
+
+.main4 .main41 h3 {
+	line-height: 60px;
+	padding-left: 35px;
+	background: url(../img/bt20.png) no-repeat left center;
+}
+
+.main4 .main41 .new {
+	width: 228px;
+	height: 36px;
+	margin-bottom: 15px;
+}
+
+.main4 .main41 .new a {
+	float: left;
+	width: 112px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	border: 1px solid grey;
+	border-bottom: 0;
+	color: black;
+}
+
+.main4 .main41 .cent {
+	width: 227px;
+	height: 160px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.main4 .main41 .cent img {
+	width: 227px;
+	height: 160px;
+}
+
+.main4 .main41 .cent .cent10 {
+	width: 227px;
+	height: 26px;
+	line-height: 26px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.cent10 i {
+	float: left;
+	width: 22px;
+	height: 26px;
+	text-align: center;
+	background: #e2291c;
+	color: white;
+}
+
+.cent10 p {
+	float: left;
+	width: 190px;
+	height: 26px;
+	font-size: 14px;
+	color: white;
+	padding-left: 15px;
+}
+
+.wei {
+	width: 225px;
+	height: 30px;
+	/*margin-top: 15px;*/
+}
+
+.wei p {
+	width: 187px;
+	height: 30px;
+	line-height: 20px;
+	padding-left: 10px;
+	float: left;
+	font-size: 13px;
+}
+
+.wei span {
+	width: 18px;
+	height: 21px;
+	float: left;
+	background: url(../img/bt22.png);
+	line-height: 21px;
+	text-align: center;
+	color: white;
+}
+
+.main42 {
+	width: 227px;
+	height: 381px;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid grey;
+	padding: 17px 20px 0 20px;
+}
+
+.main42 h3 {
+	line-height: 38px;
+	font-size: 21px;
+}
+
+.main42 p {
+	line-height: 25px;
+	font-size: 13px;
+}
+
+.main43 {
+	width: 237px;
+	height: 325px;
+	padding: 0 10px 0 20px;
+}
+
+.main4 .main43 h3 {
+	line-height: 60px;
+	padding-left: 35px;
+	background: url(../img/bt24.png) no-repeat left center;
+}
+
+.main4 .main43 p {
+	line-height: 26px;
+}
+
+
+/***********************底部**********************8*/
+
+#foot0 {
+	width: 100%;
+	height: 3px;
+	position: relative;
+}
+
+#foot0 .f-1,
+#foot0 .f-2,
+#foot0 .f-3,
+#foot0 .f-4 {
+	width: 25%;
+	height: 3px;
+	top: 0;
+	position: absolute;
+}
+
+#foot0 .f-1 {
+	background: #1fc0ef;
+	left: 0;
+}
+
+#foot0 .f-2 {
+	background: #f6a544;
+	left: 25%;
+}
+
+#foot0 .f-3 {
+	background: #8cbe00;
+	left: 50%;
+}
+
+#foot0 .f-4 {
+	background: #ff6c00;
+	left: 75%;
+}
+
+
+/*********************底部********************8*/
+
+#bottom0 {
+	width: 100%;
+	height: 310px;
+}
+
+#bottom0 .bottom1 {
+	width: 1070px;
+	height: 310px;
+	margin: 0 auto;
+}
+
+.bottom1 .cent1 {
+	width: 762px;
+	height: 274px;
+	float: left;
+	padding-left: 20px;
+	padding-top: 36px;
+}
+
+.bottom1 .cent1 h4 {
+	height: 30px;
+}
+.bottom1 .cent1-1{
+	float: left;
+	width: 762px;
+}
+.bottom1 .cent1-2{
+	float: left;
+	width: 762px;
+}
+.bottom1 .cent1-1 a {
+	margin-right: 50px;
+	margin-bottom: 22px;
+	float: left;
+}
+.bottom1 .cent1-2 a {
+	margin-right: 40px;
+	margin-bottom: 22px;
+	float: left;
+	color: black;
+}
+.bottom1 .cent2 {
+	width: 248px;
+	height: 280px;
+	float: right;
+	padding-left: 40px;
+	padding-top: 30px;
+}
+
+.bottom1 .cent2 p {
+	line-height: 30px;
+}
+
+
+/******************** 底部2*******************/
+
+#bottom2 {
+	width: 100%;
+	height: 70px;
+	padding-top: 30px;
+	text-align: center;
+	line-height: 26px;
+	background: #bababa;
+}
+
+.two {
+	width: 120px;
+	height: 165px;
+	position: absolute;
+	top: 77%;
+	right: 1%;
+}

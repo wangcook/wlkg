@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box1 {
+				width: 100px;
+				height: 100px;
+				background: purple;
+				border-radius: 50px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			#box2 {
+				width: 100px;
+				height: 100px;
+				background: paleturquoise;
+				border-radius: 50px;
+				position: absolute;
+				left: 0;
+				top: 200px;
+			}
+			
+			#box3 {
+				width: 100px;
+				height: 100px;
+				background: mediumpurple;
+				border-radius: 50px;
+				position: absolute;
+				left: 0;
+				top: 300px;
+			}
+		</style>
+
+		<script>
+			/*
+			 *  3、
+			 * 	onload 		--> 		构造函数
+			 * 	全局变量		-->		属性
+			 * 	函数			--> 		方法
+			 *  4、改错: this的处理
+			 */
+			window.onload = function() {
+				var box1 = new DragView('box1');
+				var box2 = new DragView('box2');
+				var box3 = new DragView('box3');
+			}
+
+			// 拖拽类
+			function DragView(id) {
+				// 属性
+				this.dowX = 0;
+				this.dowY = 0;
+				this.oBox = document.getElementById(id);
+				
+				var _this = this;
+				// this.oBox.onmousedown = this.downFn;
+				this.oBox.onmousedown = function(){
+					_this.downFn();
+				}
+			}
+
+			// 按下  
+			// 在火狐中有问题
+			DragView.prototype.downFn = function(ev){
+				// this -->   oBox
+				// alert(this);
+				
+				ev = ev || window.event;
+				// 保存其实位置
+				this.dowX = ev.offsetX;
+				this.dowY = ev.offsetY;
+
+				var _this = this;
+				document.onmousemove = function(){
+					_this.moveFn();
+				};
+				document.onmouseup = function(){
+					_this.upFn();
+				};
+			}
+
+			// 移动
+			DragView.prototype.moveFn = function(ev){
+				// this  -- document
+				// console.log(this);
+				
+				ev = ev || window.event;
+				var left = ev.clientX - this.dowX;
+				var top = ev.clientY - this.dowY;
+
+				this.oBox.style.left = left + 'px';
+				this.oBox.style.top = top + 'px';
+			}
+
+			// 释放
+			DragView.prototype.upFn = function(){
+				document.onmousemove = document.onmouseup = null;
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="box1"></div>
+
+		<div id="box2"></div>
+		
+		<div id="box3"></div>
+	</body>
+
+</html>

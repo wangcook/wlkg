@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			// Person类/构造函数
+			function Person(name, sex){
+				// 属性
+				this.name = name;
+				this.sex = sex;
+			}
+			
+			// prototype
+			Person.prototype.showName = function(){
+				alert('我的叫' + this.name);
+			}
+			Person.prototype.showSex = function(){
+				alert('性别为' + this.sex);
+			}
+			
+			
+			
+			
+			var wangwu = new Person('王五', '男');
+			// wangwu.showName();
+			var zhaoliu = new Person('赵六', '女');
+			// zhaoliu.showName();
+			
+			alert(wangwu.showName === zhaoliu.showName);
+</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			// 张三
+			var zhangsan = new Object();
+			// 属性
+			zhangsan.name = '张三';
+			zhangsan.sex = '男';
+			// 方法
+			zhangsan.showName = function(){
+				alert('我的名字:' + this.name);
+			}
+			zhangsan.showSex = function(){
+				alert('我的性别:' + this.sex);
+			}
+			// zhangsan.showName();
+			
+			
+			
+			// 李四
+			var lisi = new Object();
+			// 属性
+			lisi.name = '李四';
+			lisi.sex = '女';
+			// 方法
+			lisi.showName = function(){
+				alert('我的名字:' + this.name);
+			}
+			lisi.showSex = function(){
+				alert('我的性别:' + this.sex);
+			}
+			
+			
+			
+			// 工厂模式 -- (提供名字、性别 --> 返回具体对象)
+			function Person(name, sex){		// 构造函数
+				// 1、原材料
+				var obj = new Object();
+				
+				// 2、加工
+				obj.name = name;
+				obj.sex = sex;
+				obj.showName = function(){
+					alert('我的名字: ' + this.name);
+				}
+				obj.showSex = function(){
+					alert('我的性别: ' + this.sex);
+				}
+				
+				// 3、出厂销售
+				return obj;
+			}
+			
+			var zhaoliu = Person('赵六', '男');
+			var tianqi = Person('田七', '女');
+			var liming = Person('李明', '男');
+			
+			zhaoliu.showName();
+			liming.showName();
+		</script>
+	</head>
+	
+	<body>
+	</body>
+</html>

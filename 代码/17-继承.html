@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*
+			 * 人: 姓名、年龄
+			 * 
+			 * 工人: 姓名、年龄、具体工作
+			 */
+			
+			// 人这个类
+			function Person(name, age){
+				// this: 是Person的具体对象
+				
+				// 属性
+				this.name = name;
+				this.age = age;
+			}
+			// 方法
+			Person.prototype.showName = function(){
+				alert('我的名字叫' + this.name +'.');
+			}
+			Person.prototype.showAge = function(){
+				alert('今年' + this.age + '岁.');
+			}
+			
+			// 对象
+			// var liming = new Person('李明', 20);
+			// liming.showName();
+			
+			
+			
+			// 工人类 (继承自Person, Person是父亲，Worker是儿子)
+			function Worker(name, age, job){
+				// this: Worker的具体对象
+				
+				// 属性继承 (类似于new Person('李明', 20))
+				Person.call(this, name, age);
+				
+				// 添加独有的属性
+				this.job = job;
+			}
+			// 将Person中所有的方法复制一份
+			for(var i in Person.prototype){		// 方法的继承
+				Worker.prototype[i] = Person.prototype[i];
+			}
+			// 添加新方法
+			Worker.prototype.showJob = function(){
+				alert('我的工作是' + this.job);
+			}
+			
+			// 对象
+			var zhangsan = new Worker('张三', 18, '程序员');
+			zhangsan.showJob();
+			zhangsan.showName();
+			zhangsan.showAge();
+
+			// 测试
+			var zhaoliu = new Person('赵六', 17);
+			// zhaoliu.showJob();
+			zhaoliu.showName();
+			
+			
+			
+			/*
+			 * 值传递
+			 * 引用类型
+			 */
+//			var a = 10;
+//			var b = a;
+//			b += 100;
+//			alert(a);	// 10
+
+
+			var arr1 = [1,2,3];
+			// var arr2 = arr1;		// 引用
+			
+			var arr2 = [];
+			// 避免引用的问题，将所有元素都复制一份
+			for(var i=0; i<arr1.length; i++){
+				arr2.push(arr1[i]);
+			}
+			
+			arr2.push(100);
+			alert(arr1);		// 1,2,3,100
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

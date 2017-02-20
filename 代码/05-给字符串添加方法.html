@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var str = '      hello world     ';
+			
+			 String.prototype.trim = function(){
+			 	// 正则表达式
+			 	return this.replace(/^s*|s*$/g, '-');
+			 }
+			 
+			document.write(str.trim());
+		</script>
+	</head>
+	
+	<body>
+	</body>
+</html>

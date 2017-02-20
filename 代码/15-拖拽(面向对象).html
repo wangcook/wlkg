@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box1 {
+				width: 100px;
+				height: 100px;
+				background: purple;
+				border-radius: 50px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			#box2 {
+				width: 100px;
+				height: 100px;
+				background: paleturquoise;
+				border-radius: 50px;
+				position: absolute;
+				left: 0;
+				top: 200px;
+			}
+		</style>
+
+		<script>
+			// 2、改写:不能有函数嵌套，可以有全局变量；
+		
+		
+			// 全局变量
+			var dowX = 0;
+			var dowY = 0;
+			var oBox = null;
+		
+			window.onload = function() {
+				var box1 = new DragView('box1');
+			}
+
+			// 拖拽类
+			function DragView(id) {
+				oBox = document.getElementById(id);
+				oBox.onmousedown = downFn;
+			}
+
+			// 按下
+			function downFn(ev) {
+				ev = ev || window.event;
+				// 保存其实位置
+				dowX = ev.offsetX;
+				dowY = ev.offsetY;
+
+				document.onmousemove = moveFn;
+				document.onmouseup = upFn;
+			}
+
+			// 移动
+			function moveFn(ev) {
+				ev = ev || window.event;
+				var left = ev.clientX - dowX;
+				var top = ev.clientY - dowY;
+
+				oBox.style.left = left + 'px';
+				oBox.style.top = top + 'px';
+			}
+
+			// 释放
+			function upFn(){
+				document.onmousemove = document.onmouseup = null;
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="box1"></div>
+
+		<div id="box2"></div>
+	</body>
+
+</html>
